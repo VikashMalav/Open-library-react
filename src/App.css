@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+#root{
+    /* background:linear-gradient(to right,blue,lime); */
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.box-outer{
+    display: flex;
+    /* flex-wrap: wrap; */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.box-outer img{
+    padding: 5px;
+    width: 200px;
+    height: 43vh;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.box-inner .title{
+    text-decoration: none;
+    color: rgba(48, 133, 162, 0.671);
+              
 }
+.menu{
+    display: flex;
 
-.App-link {
-  color: #61dafb;
+    justify-content: center;
+    list-style: none;
+    font-size: large;
+    position: fixed;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav{
+    left: 22vw;
+    /* background-color: rgb(36, 40, 20); */
+}
+.menu li{
+    background-color: aliceblue;
+    padding: 5px 50px;
+    
+}
+.active{
+    text-decoration: none;
+color: aqua;
+}
+.menu-item{
+    text-decoration: none;
+    transition: font-size 0.5s ease-in-out,transform 1s;
+}
+.menu-item:hover{
+    font-size: 25px;
+    transform: rotate(180deg)
+}
+.box-inner .title img:hover{
+            
 }
