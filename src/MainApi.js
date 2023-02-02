@@ -14,7 +14,7 @@ function MainApi(props) {
            
         }
         fetch()
-    }, [])
+    }, [props.Request])
     return ( <div className='book-container'>
             <h2 className='category'>{props.heading}</h2>
         <div className='box-outer'>
@@ -23,10 +23,10 @@ function MainApi(props) {
                     return (
 
                         <div className='box-inner' key={index}>
-                          <div className='img-div'><Link to={`${book.cover_edition_key}`}><img src={`https://covers.openlibrary.org/b/id/${book.cover_id}-M.jpg`} /></Link></div>
+                          <div className='img-div'><Link to={`${book.cover_edition_key}`}><img src={`https://covers.openlibrary.org/b/id/${book.cover_id}-M.jpg`} alt=''/></Link></div>
                             <h2><Link className='title' to={`${book.cover_edition_key}`}>{book.title}</Link></h2>
                             <h4>{book.authors[0].name}</h4>
-                            <h4></h4>
+                          
                         </div>
 
                     )

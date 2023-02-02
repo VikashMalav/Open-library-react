@@ -16,10 +16,10 @@ function SingleBook() {
         }
         single()
 
-    }, [])
+    }, [id])
     return (
         <div className='single'>
-            <img src={`https://covers.openlibrary.org/b/id/${single.covers}-L.jpg`}></img>
+            <img src={`https://covers.openlibrary.org/b/id/${single.covers}-L.jpg`} alt=''></img>
             <h1>{single.title}</h1>
             {/* <h3>{single.authors}</h3> */}
 
