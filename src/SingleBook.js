@@ -12,13 +12,13 @@ function SingleBook() {
             let result = await axios.get(`https://openlibrary.org/books/${id}.json`)
             console.log(result.data)
             setSingle(result.data)
-        
+            
         }
         single()
 
     }, [])
     return (
-        <div>
+        <div className='single'>
             <img src={`https://covers.openlibrary.org/b/id/${single.covers}-L.jpg`}></img>
             <h1>{single.title}</h1>
             {/* <h3>{single.authors}</h3> */}

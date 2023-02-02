@@ -3,7 +3,8 @@ import { Outlet,NavLink } from "react-router-dom";
 
 function HomePage() {
   return (
-    <div className="nav">
+    <div className="">
+      <nav>
       <ul className="menu">
         <li>
           <NavLink className='menu-item' to="/">Home</NavLink>
@@ -22,6 +23,7 @@ function HomePage() {
         </li>
        
       </ul>
+      </nav>
       <Outlet />
     </div>
   );

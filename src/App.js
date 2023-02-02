@@ -19,7 +19,18 @@ function App() {
             <Route path="/services" element={<Services />}></Route>
 
             <Route path={"/books"} element={<BookLayout />}>
-              <Route index element={<MainApi />}></Route>
+              <Route index element={
+              <>
+              <MainApi heading='CHILDREN BOOKS' Request='juvenile_fiction'/>
+              <MainApi heading='PROGRAMMING BOOKS' Request='programming'/>
+              <MainApi  heading='LOVE BOOKS' Request='love'/>
+              <MainApi heading='BUSINESS BOOKS' Request='business'/>
+              <MainApi heading='BIOGRAPHY BOOKS' Request='biography'/>
+              <MainApi heading='FILMS BOOKS' Request='films'/>
+              <MainApi heading='POETRY BOOKS' Request='poetry'/>
+              <MainApi heading='PAINTING BOOKS' Request='painting__paintings'/>
+              </>
+            }></Route>
               <Route path=":id" element={<SingleBook />}></Route>
             </Route>
           </Route>
